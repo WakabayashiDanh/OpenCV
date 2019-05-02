@@ -33,7 +33,7 @@ def get_colors(image, number_of_colors, show_chart=True):
     counts = Counter(labels)
 
     center_colors = clf.cluster_centers_
-    # We get ordered colors by iterating through the keys
+    #We get ordered colors by iterating through the keys
     ordered_colors = [center_colors[i] / 255 for i in counts.keys()]
     hex_colors = [RGB2HEX(ordered_colors[i] * 255) for i in counts.keys()]
     rgb_colors = [ordered_colors[i] * 255 for i in counts.keys()]
